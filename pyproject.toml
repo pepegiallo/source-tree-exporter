@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "source-tree-exporter"
+version = "0.1.0"
+description = "Exportiert Quelltexte eines Verzeichnisbaums in eine einzelne Datei."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name = "Your Name" }
+]
+
+[project.scripts]
+source-tree-export = "source_tree_exporter.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
