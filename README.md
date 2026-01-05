@@ -44,10 +44,7 @@ Erzeugt im aktuellen Verzeichnis die Datei `_source.txt` mit allen Dateien.
 ### 1. Reines Python-Projekt
 
 ```bash
-source-tree-export . \
-  -o source.txt \
-  -t py \
-  --ignore-dirs .git .venv __pycache__
+source-tree-export . -o source.txt -t py --ignore-dirs .git .venv __pycache__
 ```
 
 Exportiert ausschließlich Python-Dateien.
