@@ -9,7 +9,7 @@ Ideal für Code-Reviews, Dokumentation, Archivierung oder als Input für LLMs.
 ## Installation (lokal / Entwicklung)
 
 ```bash
-git clone https://github.com/yourname/source-tree-exporter.git
+git clone https://github.com/pepegiallo/source-tree-exporter.git
 cd source-tree-exporter
 pip install -e .
 ```
@@ -57,11 +57,7 @@ Exportiert ausschließlich Python-Dateien.
 ### 2. Webanwendung mit Flask
 
 ```bash
-source-tree-export . \
-  -o flask_app_source.txt \
-  -t py html css js \
-  --ignore-dirs .git .venv node_modules __pycache__ \
-  --ignore-files config.py *.log
+source-tree-export . -o flask_app_source.txt -t py html css js --ignore-dirs .git .venv node_modules __pycache__ --ignore-files config.py *.log
 ```
 
 Geeignet für klassische Flask-Projekte mit Templates und Static-Files.
@@ -71,10 +67,7 @@ Geeignet für klassische Flask-Projekte mit Templates und Static-Files.
 ### 3. API-Projekt mit FastAPI
 
 ```bash
-source-tree-export . \
-  -o fastapi_source.txt \
-  -t py \
-  --ignore-dirs .git .venv __pycache__ migrations tests
+source-tree-export . -o fastapi_source.txt -t py --ignore-dirs .git .venv __pycache__ migrations tests
 ```
 
 Fokussiert auf die eigentliche API-Logik.
@@ -84,10 +77,7 @@ Fokussiert auf die eigentliche API-Logik.
 ### 4. Machine-Learning / Data-Science-Projekt
 
 ```bash
-source-tree-export . \
-  -o ml_project_source.txt \
-  -t py ipynb yaml yml \
-  --ignore-dirs .git .venv data datasets models __pycache__
+source-tree-export . -o ml_project_source.txt -t py ipynb yaml yml --ignore-dirs .git .venv data datasets models __pycache__
 ```
 
 Typisch für Projekte mit Trainingscode und Konfigurationen.
@@ -97,10 +87,7 @@ Typisch für Projekte mit Trainingscode und Konfigurationen.
 ### 5. Full-Stack Webprojekt (Backend + Frontend)
 
 ```bash
-source-tree-export . \
-  -o fullstack_source.txt \
-  -t py js ts html css \
-  --ignore-dirs .git .venv node_modules dist build __pycache__
+source-tree-export . -o fullstack_source.txt -t py js ts html css --ignore-dirs .git .venv node_modules dist build __pycache__
 ```
 
 Ideal zur Gesamtübersicht eines Repositories.
